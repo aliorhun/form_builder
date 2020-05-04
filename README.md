@@ -1,17 +1,36 @@
-Form Builder
+Simple Form Builder
 ============
 
-Form builder created with jQuery v1.10 &amp; Bootstrap v3.1
+Form builder created with jQuery v1.10 &amp; Bootstrap v3.1 &amp;  SQLite &amp; PHP
 
-Demo: http://shalotelli.github.com/form_builder/
+## Database Schema
 
-## Change History (v2)
-- Upgraded to Bootstrap v3.1.1
-- Upgraded to jQuery v1.10.2 & jQuery UI v1.10.4
-- Combined & minified CodeMirror library
-- Minified form_builder.js
-- Decoupled element options with AJAX requests
+```sql
+CREATE TABLE anketler
+(ID INT PRIMARY KEY     NOT NULL AUTOINCREMENT,
+USER           TEXT    NOT NULL,
+ANKET            TEXT     NOT NULL,
+MAIL        TEXT)
+```
 
-### NB
-To use Bootstrap v2.3.2 version of form builder, use the [**v1**](https://github.com/shalotelli/form_builder/tree/v1)
-branch instead.
+## Example Files
+
+```
+db/
+|--- result-1.csv
+|--- result-2.csv
+|--- result-3.csv
+|--- survey.db
+```
+
+## Change History (V3.1)
+- Added SQLite form db
+- Added form adder script
+- Added show survey with id
+- Added results to csv file
+
+## TODO
+- Installer script
+- Get label name and store them
+- Store RAW form data
+- Editable forms

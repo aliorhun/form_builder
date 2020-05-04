@@ -1,3 +1,6 @@
+
+
+
 <html>
     <head>
         <title>Form Builder</title>
@@ -25,7 +28,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-lg-offset-1 col-sm-10 col-md-10">
                 <div class="row">
@@ -33,6 +36,11 @@
                         <h1>Form Builder</h1>
                         <hr>
                         <div class="tabbable">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#editor-tab" data-toggle="tab">Editor</a></li>
+                                <li><a href="#source-tab" data-toggle="tab">Source</a></li>
+                            </ul>
+
                             <div class="tab-content">
                                 <div class="tab-pane active" id="editor-tab">
                                     <form id="content" class="form-horizontal">
@@ -40,6 +48,10 @@
                                             <legend>Form Name</legend>
                                         </fieldset>
                                     </form>
+                                </div>
+
+                                <div class="tab-pane" id="source-tab">
+                                    <textarea id="source"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -137,10 +149,6 @@
                 </div>
             </div>
         </div>
-        <form method="POST" action="add.php" class="form-horizontal">
-            <button type="submit" class="btn btn-primary">Save Survey</button>
-            <textarea type="hidden" name="sourcecode" id="source"></textarea>
-        </form>
 
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
